@@ -11,6 +11,4 @@ void Data::addData(string username, string password){
     studentData.setPassword(password);
 
     studentCredentials.push_back(studentData);
-
-    return;
 }
