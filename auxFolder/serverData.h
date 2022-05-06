@@ -13,6 +13,6 @@ class Data{
         void addData(string username, string password);
         string findUserName(string username);
         int existingFileSize(vector<string> unVector); 
-}
+};
 
 #endif
