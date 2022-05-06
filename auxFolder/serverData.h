@@ -11,7 +11,7 @@ class Data{
     
     public:
         void addData(string username, string password);
-        void removeData(string username, string password);
+        void removeData(string username);
         
 };
 
