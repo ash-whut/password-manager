@@ -6,7 +6,7 @@ using namespace std;
 class Creds{
    private:
       string userName = "None";
-      string password ="None";
+      string password = "None";
    public:
       void setUserName(string uName);
       void setPassword(string pswd);

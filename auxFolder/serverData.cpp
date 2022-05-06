@@ -1,29 +1,28 @@
 #include "serverData.h"
+#include "Creds.h"
 #include <string>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 void Data::addData(string username, string password){
-    this->userNames.push_back(username);
-    this->passWords.push_back(password);
-    return;
+    Creds studentData = Creds();
+
+    studentData.setUserName(username);
+    studentData.setPassword(password);
+
+    studentCredentials.push_back(studentData);
 }
 
-string Data::findUserName(string username){
-    bool status = false;
 
-    for (int i = 0; i < this->userNames.size(); ++i){
-        if (username == this->userNames.at(i)){
-            status = true;
-            return this->passWords.at(i);
+void Data::removeData(string username){
+
+    for (int i = 0; i < studentCredentials.size(); ++i){
+        if (studentCredentials.at(i).getUserName() == username){
+            studentCredentials.erase(studentCredentials.begin() + i);
+            return;
         }
     }
 
-    if (status == false){
-        return "None";
-    }
-}
-
-int Data::existingFileSize(vector<string> uNameVector){
-    return uNameVector.size();
+    cout << "Username does not exist" << endl;
 }
