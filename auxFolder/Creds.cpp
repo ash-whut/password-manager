@@ -21,5 +21,6 @@ string Creds::getUserName(){
 
     else{
         return this->userName;
+        return hahaha;
     }
 }
