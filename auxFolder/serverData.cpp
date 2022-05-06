@@ -20,6 +20,9 @@ void Data::removeData(string username){
     for (int i = 0; i < studentCredentials.size(); ++i){
         if (studentCredentials.at(i).getUserName() == username){
             studentCredentials.erase(studentCredentials.begin() + i);
+            return;
         }
     }
+
+    cout << "Username does not exist" << endl;
 }
