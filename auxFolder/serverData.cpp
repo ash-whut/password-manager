@@ -2,6 +2,7 @@
 #include "Creds.h"
 #include <string>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 void Data::addData(string username, string password){
@@ -11,4 +12,14 @@ void Data::addData(string username, string password){
     studentData.setPassword(password);
 
     studentCredentials.push_back(studentData);
+}
+
+
+void Data::removeData(string username){
+
+    for (int i = 0; i < studentCredentials.size(); ++i){
+        if (studentCredentials.at(i).getUserName() == username){
+            studentCredentials.erase(studentCredentials.begin() + i);
+        }
+    }
 }
